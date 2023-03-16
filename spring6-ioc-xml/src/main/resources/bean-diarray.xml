@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dep" class="com.atguigu.spring6.iocxml.ditest.Dept">
+        <property name="dnmae" value="秘书"/>
+        <property name="empList">
+            <list>
+                <ref bean="emp"></ref>
+            </list>
+        </property>
+    </bean>
+
+    <util:list>
+
+    </util:list>
+
+    <bean id="emp" class="com.atguigu.spring6.iocxml.ditest.Emp">
+        <property name="age" value="20"/>
+        <property name="ename" value="Lucy"/>
+        <property name="dept" ref="dep"/>
+        <property name="loves">
+            <array>
+                <value>吃饭</value>
+                <value>睡觉</value>
+                <value>睡大觉</value>
+            </array>
+        </property>
+    </bean>
+</beans>

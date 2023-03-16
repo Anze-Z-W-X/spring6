@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="controller" class="com.atguigu.spring6.iocxml.auto.controller.UserController" autowire="byType"/>
+
+    <bean id="service" class="com.atguigu.spring6.iocxml.auto.service.UserServiceImpl" autowire="byType"/>
+
+    <bean id="dao" class="com.atguigu.spring6.iocxml.auto.dao.UserDAOImpl" autowire="byType"/>
+</beans>

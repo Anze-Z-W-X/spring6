@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dep" class="com.atguigu.spring6.iocxml.ditest.Dept">
+        <property name="dnmae" value="安保部"/>
+    </bean>
+
+    <bean id="emp" class="com.atguigu.spring6.iocxml.ditest.Emp">
+        <property name="age" value="50"/>
+        <property name="ename" value="彩祭"/>
+        <property name="dept" ref="dep"/>
+    </bean>
+</beans>
